@@ -1,2 +1,28 @@
-<h1>To-Dos</h1>
-<app-to-dos></app-to-dos>
+<header>
+    <nav>
+        <app-nibolan-header></app-nibolan-header>
+        <app-nibolan-user-profile></app-nibolan-user-profile>
+    </nav>
+</header>
+<main>
+    <aside>
+        <app-nibolan-menu></app-nibolan-menu>
+    </aside>
+
+    <section>
+
+        <div class="card" id="thingOne" *ngIf="cards.thingOne">
+            <app-nibolan-thing-one></app-nibolan-thing-one>
+        </div>
+
+        <div class="card" id="thingTwo" *ngIf="cards.thingTwo">
+            <app-nibolan-thing-two></app-nibolan-thing-two>
+        </div>
+
+        <div class="card" id="calendar" *ngIf="cards.calendar">
+            <app-nibolan-calendar></app-nibolan-calendar>
+        </div>
+
+    </section>
+
+</main>
