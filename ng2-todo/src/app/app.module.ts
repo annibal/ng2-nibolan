@@ -13,6 +13,7 @@ import { NibolanMenuComponent } from './nibolan-menu/nibolan-menu.component';
 import { NibolanThingOneComponent } from './nibolan-thing-one/nibolan-thing-one.component';
 import { NibolanThingTwoComponent } from './nibolan-thing-two/nibolan-thing-two.component';
 import { NibolanCalendarComponent } from './nibolan-calendar/nibolan-calendar.component';
+import { NibolanNotificationsComponent } from './nibolan-notifications/nibolan-notifications.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NibolanCalendarComponent } from './nibolan-calendar/nibolan-calendar.co
     NibolanMenuComponent,
     NibolanThingOneComponent,
     NibolanThingTwoComponent,
-    NibolanCalendarComponent
+    NibolanCalendarComponent,
+    NibolanNotificationsComponent
   ],
   imports: [
     BrowserModule,

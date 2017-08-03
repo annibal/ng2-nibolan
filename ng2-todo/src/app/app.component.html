@@ -1,15 +1,25 @@
 <header>
     <nav>
-        <app-nibolan-header></app-nibolan-header>
-        <app-nibolan-user-profile></app-nibolan-user-profile>
+        <app-nibolan-menu></app-nibolan-menu>
     </nav>
 </header>
 <main>
-    <aside>
-        <app-nibolan-menu></app-nibolan-menu>
-    </aside>
+    <section id="status-bar">
+        <app-nibolan-header></app-nibolan-header>
 
-    <section>
+        <button class="pull-right"
+            (click)="showNotifications = !showNotifications"
+            [class.active]="showProfile">
+                N
+        </button>
+        <button class="pull-right"
+            (click)="showProfile = !showProfile"
+            [class.active]="showProfile">
+                U
+        </button>
+    </section>
+
+    <section id="main-section">
 
         <div class="card" id="thingOne" *ngIf="cards.thingOne">
             <app-nibolan-thing-one></app-nibolan-thing-one>
@@ -26,3 +36,10 @@
     </section>
 
 </main>
+
+<div class="overlay" [class.visible]="showProfile">
+    <app-nibolan-user-profile></app-nibolan-user-profile>
+</div>
+<div class="overlay" [class.visible]="showNotifications">
+    <app-nibolan-notifications></app-nibolan-notifications>
+</div>
